@@ -9,9 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello World")
+  @State var name: String = "soni"
+  var body: some View {
+    VStack {
+      Text(name)
+        .font(.largeTitle)
+      Button(action:{
+        self.name = "suman"
+      }) {
+        Text("Change Name")
+      }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
